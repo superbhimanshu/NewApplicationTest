@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="YPTest1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/com/test/YPTest.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

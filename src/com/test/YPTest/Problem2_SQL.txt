@@ -1,0 +1,14 @@
+select so.OfficeName as OfficeName, sum(sp.AnnualSales) as totalAnnualSales 
+from SalesOffices so, SalesPeople sp 
+where so.OfficeID = sp.OfficeID 
+group by so.officeID 
+Having totalAnnualSales >= 350000  
+order by totalAnnualSales desc;
+
+
+--BONUS POINT SQL
+select so.OfficeName as OfficeName, sp.FirstName, sp.LastName, max(sp.AnnualSales) as maxSale  
+from SalesOffices so, SalesPeople sp 
+where so.OfficeID = sp.OfficeID 
+group by so.OfficeName 
+order by maxSale desc;

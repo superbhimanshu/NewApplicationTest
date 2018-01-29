@@ -4,7 +4,7 @@ public class ConvertDecimalToBinary {
 
 	public static void main(String[] args) {
 		
-		int n= 500;
+		int n= 10;
 		String s = "";
 		while(n!=0){
 			s = String.valueOf(n%2) + s;

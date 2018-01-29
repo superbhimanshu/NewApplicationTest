@@ -1,5 +1,8 @@
 package com.careerCupGoogle;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by hverma on 10/14/17.
  *
@@ -9,14 +12,40 @@ package com.careerCupGoogle;
  */
 public class SubstringAndAnagram {
 
+    static Set<String> allPermutFirstWord = new HashSet<>();
     public static void main(String[] args){
-        String firstWord = "LGE";
-        String seconfWord = "GOOGLE";
+        String firstWord = "GEO";
+        String secondWord = "GOOGLE";
 
-        System.out.println(subStringAnagram(firstWord, seconfWord));
+        System.out.println(subStringAnagram(firstWord, secondWord));
     }
 
     private static boolean subStringAnagram(String firstWord, String secondWord){
-        return false;
+
+        boolean result = false;
+
+        allPermutation("", firstWord);
+        for(String s : allPermutFirstWord){
+            if(secondWord.contains(s)){
+                result = true;
+            }
+        }
+
+        return result;
     }
+
+    private static void allPermutation(String prefix, String str){
+
+        int n = str.length();
+        if(n==0){
+            allPermutFirstWord.add(prefix);
+            System.out.println(prefix);
+        }else {
+            for(int i=0;i<str.length();i++){
+                allPermutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i+1, n));
+            }
+        }
+
+    }
+
 }

@@ -49,7 +49,7 @@ public class CommonUrlPath {
 		data.add(new LogLine(1,"/login"));
 		data.add(new LogLine(1,"/login"));
 		
-		commonUrl(data);
+		System.out.println(commonUrl(data));
 		
 	}
 

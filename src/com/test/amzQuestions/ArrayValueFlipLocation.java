@@ -30,6 +30,19 @@ public class ArrayValueFlipLocation {
 
         int[] out;
         int maxConsecutive1Length = 0;
+        int leftIndex=0;
+        int rightIndex=0;
+        int[] zeroFlipPosition = new int[m];
+        int remainingFlips = m;
+        while(rightIndex!= arr.length){
+            if(arr[rightIndex] == 1){
+                rightIndex++;
+            }
+            if(arr[rightIndex] == 0){
+
+            }
+        }
+
 
     }
 

@@ -273,8 +273,8 @@ import java.util.Scanner;
         bt.insert(5);
         bt.insert(1);
       System.out.print("\nLevel Order with Levels : ");
-      bt.dfsForBinaryTree();
-     // bt.levelOrderWithLevel();
+     // bt.dfsForBinaryTree();
+      bt.levelOrderWithLevel();
 //        char ch;        
 //        do    
 //        {
